@@ -134,7 +134,7 @@ class MyMainWindow(QMainWindow, Ui_myMainWindow):
             # Make sure, the page which is shown is the test instruction page
             self.myStackedWidget.setCurrentWidget(self.myPageTestInstruction)
             # Show the license text on the license page
-            self.myLicenseText = open(os.path.split(os.path.normpath(sys.argv[0]))[0] + os.sep + 'COPYING.txt', encoding='utf-8-sig').read()
+            self.myLicenseText = open(os.path.split(os.path.realpath(sys.argv[0]))[0] + os.sep + 'COPYING.txt', encoding='utf-8-sig').read()
             self.myTextBrowserLicense.setPlainText(self.myLicenseText)
             # Show the copyright information on the contact page
             self.myTextBrowserContact.setPlainText('Copyright © 2017 Patrick Kuttruff \n\nhttps://github.com/President3D/Quality-SPC')
